@@ -1,7 +1,6 @@
 import asyncio
 import websockets
 import socket
-from csv import writer
 import cv2
 import numpy as np
 from ImageProcessingModule import OPTICALFLOW

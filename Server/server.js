@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const WebSocket = require('ws');
-const { channel } = require('diagnostics_channel');
+
 const app = express();
 
 const WS_PORT = 8888;
@@ -46,6 +46,3 @@ wsServer.on('connection', (ws, req) => {
     delete connectedClients[ws.id];
   });
 });
-
-app.get('/client', (req, res) => res.sendFile(path.resolve(__dirname, './client.html')));
-app.listen(HTTP_PORT, () => console.log(`HTTP server listening at ${HTTP_PORT}`));
